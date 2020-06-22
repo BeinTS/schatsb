@@ -13,10 +13,10 @@ body{
 
 h1{
     color: #0055ff;
-    width: 100%;
+    width: 95%;
     padding: .3em;
     border-radius: 3em;
-    margin: 0 5vw;
+    margin: .3em 5vw;
     /* border-top-left-radius: .75em;
     border-top-right-radius: .75em; */
     background-color: black;
