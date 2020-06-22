@@ -14,20 +14,30 @@ body{
 h1{
     color: #0055ff;
     width: 100%;
-    padding: .5em;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    padding: .3em;
+    border-radius: 3em;
+    margin: 0 5vw;
+    /* border-top-left-radius: .75em;
+    border-top-right-radius: .75em; */
     background-color: black;
+}
+
+.messager{
+    color: #bb9cc7;
 }
 
 .input-field{
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     bottom: 1em;
     width: 100%;
     padding: 0 5vw;
+    font-size: 1.2rem;
+    
 }
+
+
 
 input{
     border: none;
@@ -35,6 +45,7 @@ input{
     border-radius: 3em;
     padding: .8em 1.5em;
     background: #eeeeee;
+    font-size: 1rem;
 }
 
 input:focus{
@@ -49,6 +60,34 @@ input:focus{
     border-radius: 3em;
     background: #0055ff;
     color: white;
+    font-size: 1rem;
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 5vw;
+    margin-bottom: 5em;
+    margin-top: 5em;
+}
+
+.b-msg{
+    align-self: flex-start;
+    background: #2b72ff;
+    color: white;
+    padding: .5em 1em;
+    border-radius: 3em;
+    margin: .5em 0;
+}
+
+.s-msg{
+    align-self: flex-end;
+    background: #eeeeee;
+    color: rgb(20, 7, 51);
+    padding: .5em 1em;
+    border-radius: 3em;
+    margin: .5em 0;
 }
 
 @media (min-width: 768px){
