@@ -18,8 +18,10 @@ app.get('/app.css', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log('A user connected');
+    io.emit('msg', ['notification', 'a user connected']);
     socket.on('disconnect', () => {
         console.log('user disconnected');
+        io.emit('msg', ['notification', 'a user disconnected']);
     });
     socket.on('msg', (msg) => {
         console.log(msg);

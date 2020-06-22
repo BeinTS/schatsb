@@ -90,6 +90,16 @@ input:focus{
     margin: .5em 0;
 }
 
+.notification{
+    align-self: center;
+    background: #4b4b4b;
+    color: rgb(164, 196, 255);
+    font-size: .6rem;
+    padding: .5em 1em;
+    border-radius: 3em;
+    margin: .5em 0;
+}
+
 @media (min-width: 768px){
 
     .input-field{

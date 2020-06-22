@@ -33,6 +33,9 @@ socket.on('msg', (msg) => {
         if(msg[0] == 'bharat'){
             messageDiv.classList.add('b-msg');
         }
+        if(msg[0] == 'notification'){
+            messageDiv.classList.add('notification');
+        }
         messagesView.appendChild(messageDiv);
         messageDiv.innerText = msg[1];
     }
