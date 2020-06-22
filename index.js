@@ -8,6 +8,14 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname+'/index.html');
 });
 
+app.get('/app.js', (req, res) => {
+    res.sendFile(__dirname+'/app.js');
+});
+
+app.get('/app.css', (req, res) => {
+    res.sendFile(__dirname+'/app.css');
+});
+
 io.on('connection', (socket) => {
     console.log('A user connected');
     socket.on('disconnect', () => {

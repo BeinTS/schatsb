@@ -3,44 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Socket.io</title>
+    <title>schatsb</title>
+    <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-    <h1>Socket.io</h1>
+    <h1>schatsb</h1>
     <div class="messages">
 
     </div>
-    <input type="text" /><button>Send</button>
+    <div class="input-field">
+        <input type="text" /><button class="send-btn">Send</button>
+    </div>
+
 
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-        const socket = io();
-        const input = document.querySelector('input');
-        const send = document.querySelector('button');
-        const messagesView = document.querySelector('.messages');
-        const messages = [];
-        console.log(input, send);
-
-        messages.forEach(message => {
-            const messageDiv = document.createElement('div');
-            messagesView.appendChild(messageDiv);
-            messageDiv.innerText = message;
-        });
-        
-
-        send.addEventListener('click', () => {
-            socket.emit('msg', input.value);
-            input.value = '';
-            return false;
-        });
-
-        socket.on('msg', (msg) => {
-            console.log(msg);
-            messages.push(msg);
-            const messageDiv = document.createElement('div');
-            messagesView.appendChild(messageDiv);
-            messageDiv.innerText = msg;
-        })
-    </script>
+    <script src="./app.js"></script>
 </body>
 </html>
