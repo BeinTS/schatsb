@@ -27,6 +27,10 @@ loginButton.addEventListener('click', () => {
 
 /////////////
 
+/// delete logic
+
+//////////////
+
 fetch('/messages')
     .then(response => response.json())
     .then(messages => {
@@ -106,3 +110,7 @@ b.addEventListener('click', () => {
 
 });
 
+
+/// delete logic
+
+//////////////

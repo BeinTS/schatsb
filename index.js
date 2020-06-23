@@ -36,7 +36,8 @@ app.get('/messages', (req, res) => {
     Message.find()
         .then(messages => res.json(messages))
         .catch(err => res.status(400).json(err));
-})
+});
+
 
 io.on('connection', (socket) => {
     console.log('A user connected');
@@ -61,6 +62,11 @@ io.on('connection', (socket) => {
     });
     socket.on('message', (message) => {
         console.log(message);
+        if(message.text == 'dlt'){
+        Message.deleteMany({ type: /.*/ }, (err) => console.log(err));
+            console.log('messages deleted');
+            return;
+        }
         io.emit('message', message);
         let newMessage = new Message({
             type: message.type,
