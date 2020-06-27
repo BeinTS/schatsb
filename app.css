@@ -103,16 +103,19 @@ h1{
     font-weight: 500;
     border: none;
     border-radius: 3em;
-    background: #0055ff;
+    background: rgb(92, 92, 92);
     color: white;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .send-btn:focus{
     outline: none;
 }
 
 .send-btn img{
-    height: 100%;
+    max-width: 60%;
 }
 
 .messages{
